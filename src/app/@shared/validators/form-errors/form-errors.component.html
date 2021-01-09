@@ -1,0 +1,6 @@
+<ul *ngIf="shouldShowErrors()" class="form-errors">
+  <li class="text-danger text-break" *ngFor="let error of listOfErrors()">
+    {{error}}
+    <div id="error-links"></div>
+  </li>
+</ul>
