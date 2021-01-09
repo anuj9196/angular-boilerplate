@@ -49,7 +49,9 @@ export class LoginComponent implements OnInit {
     const data = this.form.value;
     console.log('received data: ', data);
 
-    this.auth.login();
+    this.auth.login(data).subscribe(res => {
+      console.log('Login response: ', res);
+    });
     console.log('authenticated: ', this.auth.isAuthenticated());
     this.router.navigate(['']);
   }

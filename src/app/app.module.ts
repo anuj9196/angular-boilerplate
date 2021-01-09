@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptor} from './@shared/interceptors/auth.interceptor';
+import {ErrorModule} from './@error/error.module';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -20,6 +21,7 @@ import {AuthInterceptor} from './@shared/interceptors/auth.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    ErrorModule,
     // NgbModule,
     // FontAwesomeModule
   ],
