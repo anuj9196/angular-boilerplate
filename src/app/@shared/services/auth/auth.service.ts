@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {AppHttpClient} from '../../client/app-http.client';
 import {Observable} from 'rxjs';
+import {AuthLoginPayloadModel} from '../../models/auth/auth-login-payload.model';
+import {AuthLoginResponseModel} from '../../models/auth/auth-login-response.model';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +41,7 @@ export class AuthService {
   // /**
   //  * Login
   //  */
-  // public login(data: any): Observable<unknown> {
+  // public login(data: AuthLoginPayloadModel): Observable<AuthLoginResponseModel> {
   //   this.loggedIn = true;
   //   const url = `${this.endpoint}login`;
   //   return this.appHttp.Post(url, data);
